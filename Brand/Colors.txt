@@ -1,8 +1,0 @@
---- BRAND COLORS ---
-
-PURPLE ---> #391059
-WHITE ---> #FFFFFF
-
-
-
-
