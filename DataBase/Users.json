@@ -1,0 +1,55 @@
+[
+    {
+        "name": "Laia",
+        "lastName": "Clemente",
+        "age": 25,
+        "email": "clementecrespo.laia@gmail.com",
+        "password": "1234",
+        "weight": 56,
+        "height": 1.65,
+        "routines": [
+            {
+                "name": "Rutina 2",
+                "description": "Rutina avanzada",
+                "objective": "Ganar masa muscular",
+                "days": [
+                    {
+                        "dayName": "Lunes",
+                        "dayDescription": "Dia de piernas",
+                        "exercises": [
+                            {
+                                "name": "Sentadillas",
+                                "image": "ejemplouri.jpg",
+                                "muscularGroup": "Piernas",
+                                "rangeOfReps": "10-12",
+                                "series": 3,
+                                "registeredProgress": [
+                                    {
+                                        "date": "2024-03-01",
+                                        "records": [
+                                            {
+                                                "seriesNumber": 1,
+                                                "reps": 10,
+                                                "weight": 50
+                                            },
+                                            {
+                                                "seriesNumber": 2,
+                                                "reps": 12,
+                                                "weight": 55
+                                            },
+                                            {
+                                                "seriesNumber": 3,
+                                                "reps": 12,
+                                                "weight": 55
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
