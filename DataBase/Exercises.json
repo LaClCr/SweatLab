@@ -1,7 +1,222 @@
 [
     {
-        "name": "Ejemplo de nombre de ejercicio",
-        "image": "ejemplo.com/imagen.jpg",
+        "name": "Crunch abdominal",
+        "image": "",
+        "muscularGroup": "Abdominales"
+    },
+    {
+        "name": "Plancha",
+        "image": "",
+        "muscularGroup": "Abdominales"
+    },
+    {
+        "name": "Elevación de piernas",
+        "image": "",
+        "muscularGroup": "Abdominales"
+    },
+    {
+        "name": "Mountain climbers",
+        "image": "",
+        "muscularGroup": "Abdominales"
+    },
+    {
+        "name": "Russian twist",
+        "image": "",
+        "muscularGroup": "Abdominales"
+    },
+    {
+        "name": "Maquina de aductores",
+        "image": "",
+        "muscularGroup": "Adductor"
+    },
+    {
+        "name": "Sentadillas con banda elástica",
+        "image": "",
+        "muscularGroup": "Adductor"
+    },
+    {
+        "name": "Prensa de piernas pies abiertos",
+        "image": "",
+        "muscularGroup": "Adductor"
+    },
+    {
+        "name": "Curl de bíceps con barra",
+        "image": "",
+        "muscularGroup": "Bíceps"
+    },
+    {
+        "name": "Curl de bíceps con mancuernas",
+        "image": "",
+        "muscularGroup": "Bíceps"
+    },
+    {
+        "name": "Martillo de bíceps",
+        "image": "",
+        "muscularGroup": "Bíceps"
+    },
+    {
+        "name": "Curl con polea",
+        "image": "",
+        "muscularGroup": "Bíceps"
+    },
+    {
+        "name": "Sentadillas",
+        "image": "",
+        "muscularGroup": "Cuádriceps"
+    },
+    {
+        "name": "Prensa de piernas pies juntos",
+        "image": "",
+        "muscularGroup": "Cuádriceps"
+    },
+    {
+        "name": "Zancadas",
+        "image": "",
+        "muscularGroup": "Cuádriceps"
+    },
+    {
+        "name": "Dominadas",
+        "image": "",
+        "muscularGroup": "Espalda"
+    },
+    {
+        "name": "Remo con barra",
+        "image": "",
+        "muscularGroup": "Espalda"
+    },
+    {
+        "name": "Remo con polea baja",
+        "image": "",
+        "muscularGroup": "Espalda"
+    },
+    {
+        "name": "Pulldown al pecho",
+        "image": "",
+        "muscularGroup": "Espalda"
+    },
+    {
+        "name": "Pulldown trasnuca",
+        "image": "",
+        "muscularGroup": "Espalda"
+    },
+    {
+        "name": "Pull-up con agarre ancho",
+        "image": "",
+        "muscularGroup": "Espalda"
+    },
+    {
+        "name": "Elevación de talones de pie",
+        "image": "",
+        "muscularGroup": "Gemelos"
+    },
+    {
+        "name": "Elevación de talones sentado",
+        "image": "",
+        "muscularGroup": "Gemelos"
+    },
+    {
+        "name": "Prensa de gemelos",
+        "image": "",
+        "muscularGroup": "Gemelos"
+    },
+    {
+        "name": "Press militar",
+        "image": "",
+        "muscularGroup": "Hombros"
+    },
+    {
+        "name": "Elevaciones laterales",
+        "image": "",
+        "muscularGroup": "Hombros"
+    },
+    {
+        "name": "Elevaciones frontales",
+        "image": "",
+        "muscularGroup": "Hombros"
+    },
+    {
+        "name": "Pájaros",
+        "image": "",
+        "muscularGroup": "Hombros"
+    },
+    {
+        "name": "Face pull con polea alta",
+        "image": "",
+        "muscularGroup": "Hombros"
+    },
+    {
+        "name": "Peso muerto rumano",
+        "image": "",
+        "muscularGroup": "Femoral"
+    },
+    {
+        "name": "Curl de pierna acostado",
+        "image": "",
+        "muscularGroup": "Femoral"
+    },
+    {
+        "name": "Curl de pierna sentado",
+        "image": "",
+        "muscularGroup": "Femoral"
+    },
+    {
+        "name": "Sentadillas sumo",
+        "image": "",
+        "muscularGroup": "Glúteos"
+    },
+    {
+        "name": "Sentadilla búlgara",
+        "image": "",
+        "muscularGroup": "Glúteos"
+    },
+    {
+        "name": "Hip thrust",
+        "image": "",
+        "muscularGroup": "Glúteos"
+    },
+    {
+        "name": "Patada de glúteo con polea",
+        "image": "",
+        "muscularGroup": "Glúteos"
+    },
+    {
+        "name": "Press de banca",
+        "image": "",
         "muscularGroup": "Pecho"
+    },
+    {
+        "name": "Press inclinado",
+        "image": "",
+        "muscularGroup": "Pecho"
+    },
+    {
+        "name": "Aperturas con mancuernas",
+        "image": "",
+        "muscularGroup": "Pecho"
+    },
+    {
+        "name": "Pull-over con mancuerna",
+        "image": "",
+        "muscularGroup": "Pecho"
+    },
+    {
+        "name": "Press de tríceps en polea",
+        "image": "",
+        "muscularGroup": "Tríceps"
+    },
+    {
+        "name": "Fondos en paralelas",
+        "image": "",
+        "muscularGroup": "Tríceps"
+    },
+    {
+        "name": "Extensiones de tríceps con mancuerna",
+        "image": "",
+        "muscularGroup": "Tríceps"
+    },
+    {
+        "name": "Press francés",
+        "image": "",
+        "muscularGroup": "Tríceps"
     }
 ]
