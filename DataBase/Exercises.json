@@ -85,11 +85,6 @@
         "muscularGroup": "Espalda"
     },
     {
-        "name": "Remo con polea baja",
-        "image": "",
-        "muscularGroup": "Espalda"
-    },
-    {
         "name": "Pulldown al pecho",
         "image": "",
         "muscularGroup": "Espalda"
@@ -98,16 +93,6 @@
         "name": "Pulldown trasnuca",
         "image": "",
         "muscularGroup": "Espalda"
-    },
-    {
-        "name": "Pull-up con agarre ancho",
-        "image": "",
-        "muscularGroup": "Espalda"
-    },
-    {
-        "name": "Elevación de talones de pie",
-        "image": "",
-        "muscularGroup": "Gemelos"
     },
     {
         "name": "Elevación de talones sentado",
@@ -140,17 +125,7 @@
         "muscularGroup": "Hombros"
     },
     {
-        "name": "Face pull con polea alta",
-        "image": "",
-        "muscularGroup": "Hombros"
-    },
-    {
         "name": "Peso muerto rumano",
-        "image": "",
-        "muscularGroup": "Femoral"
-    },
-    {
-        "name": "Curl de pierna acostado",
         "image": "",
         "muscularGroup": "Femoral"
     },
@@ -190,27 +165,12 @@
         "muscularGroup": "Pecho"
     },
     {
-        "name": "Aperturas con mancuernas",
-        "image": "",
-        "muscularGroup": "Pecho"
-    },
-    {
-        "name": "Pull-over con mancuerna",
-        "image": "",
-        "muscularGroup": "Pecho"
-    },
-    {
         "name": "Press de tríceps en polea",
         "image": "",
         "muscularGroup": "Tríceps"
     },
     {
         "name": "Fondos en paralelas",
-        "image": "",
-        "muscularGroup": "Tríceps"
-    },
-    {
-        "name": "Extensiones de tríceps con mancuerna",
         "image": "",
         "muscularGroup": "Tríceps"
     },
