@@ -1,182 +1,182 @@
 [
     {
         "name": "Crunch abdominal",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/crunchAbdominal.png",
         "muscularGroup": "Abdominales"
     },
     {
         "name": "Plancha",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/planchaAbdominal.png",
         "muscularGroup": "Abdominales"
     },
     {
         "name": "Elevación de piernas",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/elevacionPiernas.png",
         "muscularGroup": "Abdominales"
     },
     {
         "name": "Mountain climbers",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/mountainClimbers.png",
         "muscularGroup": "Abdominales"
     },
     {
         "name": "Russian twist",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/russianTwists.png",
         "muscularGroup": "Abdominales"
     },
     {
         "name": "Maquina de aductores",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/maquinaAdductor.png",
         "muscularGroup": "Adductor"
     },
     {
         "name": "Sentadillas con banda elástica",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/sentadilla_Banda.png",
         "muscularGroup": "Adductor"
     },
     {
         "name": "Prensa de piernas pies abiertos",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/prensaPiernas.png",
         "muscularGroup": "Adductor"
     },
     {
         "name": "Curl de bíceps con barra",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/curlBiceps_Barra.png",
         "muscularGroup": "Bíceps"
     },
     {
         "name": "Curl de bíceps con mancuernas",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/curlBiceps_Mancuerna.png",
         "muscularGroup": "Bíceps"
     },
     {
         "name": "Martillo de bíceps",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/curlBiceps_Martillo.png",
         "muscularGroup": "Bíceps"
     },
     {
         "name": "Curl con polea",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/curlBiceps_Polea.png",
         "muscularGroup": "Bíceps"
     },
     {
         "name": "Sentadillas",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/sentadilla.png",
         "muscularGroup": "Cuádriceps"
     },
     {
         "name": "Prensa de piernas pies juntos",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/prensaPiernas.png",
         "muscularGroup": "Cuádriceps"
     },
     {
         "name": "Zancadas",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/zancadas.png",
         "muscularGroup": "Cuádriceps"
     },
     {
         "name": "Dominadas",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/dominadas.png",
         "muscularGroup": "Espalda"
     },
     {
         "name": "Remo con barra",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/remoBarra.png",
         "muscularGroup": "Espalda"
     },
     {
         "name": "Pulldown al pecho",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/pullDown_Pecho.png",
         "muscularGroup": "Espalda"
     },
     {
         "name": "Pulldown trasnuca",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/pullDown_TrasNuca.png",
         "muscularGroup": "Espalda"
     },
     {
         "name": "Elevación de talones sentado",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/elevacionTalones_Sentado.png",
         "muscularGroup": "Gemelos"
     },
     {
         "name": "Prensa de gemelos",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/prensaPiernas.png",
         "muscularGroup": "Gemelos"
     },
     {
         "name": "Press militar",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/militarPress.png",
         "muscularGroup": "Hombros"
     },
     {
         "name": "Elevaciones laterales",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/elevacionLateral.png",
         "muscularGroup": "Hombros"
     },
     {
         "name": "Elevaciones frontales",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/elevacionFrontal.png",
         "muscularGroup": "Hombros"
     },
     {
         "name": "Pájaros",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/pajaros.png",
         "muscularGroup": "Hombros"
     },
     {
         "name": "Peso muerto rumano",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/pesoMuerto.png",
         "muscularGroup": "Femoral"
     },
     {
         "name": "Curl de pierna sentado",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/femoralSentado.png",
         "muscularGroup": "Femoral"
     },
     {
         "name": "Sentadillas sumo",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/sentadillaSumo.png",
         "muscularGroup": "Glúteos"
     },
     {
         "name": "Sentadilla búlgara",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/sentadillaBulgara.png",
         "muscularGroup": "Glúteos"
     },
     {
         "name": "Hip thrust",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/hipThrust.png",
         "muscularGroup": "Glúteos"
     },
     {
         "name": "Patada de glúteo con polea",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/kickBack.png",
         "muscularGroup": "Glúteos"
     },
     {
         "name": "Press de banca",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/pressBanca.png",
         "muscularGroup": "Pecho"
     },
     {
         "name": "Press inclinado",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/pressBancaInclined.png",
         "muscularGroup": "Pecho"
     },
     {
         "name": "Press de tríceps en polea",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/tricepsPolea.png",
         "muscularGroup": "Tríceps"
     },
     {
         "name": "Fondos en paralelas",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/fondos.png",
         "muscularGroup": "Tríceps"
     },
     {
         "name": "Press francés",
-        "image": "",
+        "image": "https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/pressFrances.png",
         "muscularGroup": "Tríceps"
     }
 ]
