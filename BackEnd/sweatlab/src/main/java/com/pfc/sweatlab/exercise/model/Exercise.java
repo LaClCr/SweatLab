@@ -1,23 +1,31 @@
 package com.pfc.sweatlab.exercise.model;
+
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "exercise")
 public class Exercise {
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
+	private Long id;
+
 	@Column(name = "name", nullable = false)
-    private String name;
-	
+	private String name;
+
 	@Column(name = "image", nullable = false)
-    private String image;
-	
+	private String image;
+
 	@Column(name = "muscular_group", nullable = true)
-    private String muscularGroup;
+	private String muscularGroup;
+
+	@Column(name = "weight", nullable = true)
+	private String weight;
+
+	@Column(name = "reps", nullable = true)
+	private String reps;
+
 
 	public Long getId() {
 		return id;
@@ -51,5 +59,25 @@ public class Exercise {
 		this.muscularGroup = muscularGroup;
 	}
 
+	public String getWeight() {
+		return weight;
+	}
+
+	public void setWeight(String weight) {
+		this.weight = weight;
+	}
+
+	public String getReps() {
+		return reps;
+	}
+
+	public void setReps(String reps) {
+		this.reps = reps;
+	}
+
+
+
 	
+	
+
 }

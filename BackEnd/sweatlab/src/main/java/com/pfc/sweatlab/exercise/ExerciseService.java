@@ -13,6 +13,11 @@ public class ExerciseService {
 	@Autowired
 	ExerciseRepository exerciseRepository;
 
+	public Exercise get(Long id) {
+
+        return this.exerciseRepository.findById(id).orElse(null);
+    }
+	
 	public List<Exercise> findAll() {
 
 		return (List<Exercise>) this.exerciseRepository.findAll();
@@ -25,7 +30,7 @@ public class ExerciseService {
 		if (id == null) {
 			exercise = new Exercise();
 		} else {
-			exercise = this.exerciseRepository.findById(id).orElse(null);
+			exercise = this.get(id);
 		}
 
 		exercise.setName(ex.getName());
@@ -37,7 +42,7 @@ public class ExerciseService {
 
 	public void delete(Long id) throws Exception {
 
-		if (this.exerciseRepository.findById(id).orElse(null) == null) {
+		if (this.get(id) == null) {
 			throw new Exception("Not exists");
 		}
 

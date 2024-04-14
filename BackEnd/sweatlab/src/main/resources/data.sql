@@ -35,3 +35,11 @@ INSERT INTO exercise (name, image, muscular_group) VALUES
 ('Press de tríceps en polea', 'https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/tricepsPolea.png', 'Tríceps'),
 ('Fondos en paralelas', 'https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/fondos.png', 'Tríceps'),
 ('Press francés', 'https://github.com/LaClCr/SweatLab/blob/images/Exercises_IMG/pressFrances.png', 'Tríceps');
+
+
+INSERT INTO app_user (name, last_name, email, password, date_of_birth, weight, height)
+VALUES ('Laia', 'Clemente', 'clementecrespo.laia@gmail.com', '1234', '1990-01-29', 56.0, 163.0);
+
+INSERT INTO app_routine (name, user_id)
+VALUES ('Mi rutina 1', 1);
+
