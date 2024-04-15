@@ -79,28 +79,61 @@ public class RoutineController {
 		return this.routineService.removeUserRoutine(userId, routineId);
 	}
 	
+	/**
+	 * Agrega un nuevo ejercicio a una rutina específica de un usuario.
+	 *
+	 * @param userId     ID del usuario.
+	 * @param routineId  ID de la rutina a la que se agregará el ejercicio.
+	 * @param exercise   El ejercicio a agregar.
+	 * @return           ResponseEntity con un mensaje indicando el resultado de la operación.
+	 */
 	@RequestMapping(path = "/exercise/{userId}/{routineId}", method = RequestMethod.PUT)
 	public ResponseEntity<String> addExercise(@PathVariable("userId") Long userId,
 	        @PathVariable("routineId") Long routineId, @RequestBody Exercise exercise) {
 	    return this.routineService.addExercise(userId, routineId, exercise);
 	}
 
+	/**
+	 * Actualiza un ejercicio existente en una rutina específica de un usuario.
+	 *
+	 * @param userId      ID del usuario.
+	 * @param routineId   ID de la rutina a la que pertenece el ejercicio.
+	 * @param exerciseId  ID del ejercicio a actualizar.
+	 * @param exercise    Los datos actualizados del ejercicio.
+	 * @return            ResponseEntity con un mensaje indicando el resultado de la operación.
+	 */
 	@RequestMapping(path = "/exercise/{userId}/{routineId}/{exerciseId}", method = RequestMethod.PUT)
 	public ResponseEntity<String> updateExercise(@PathVariable("userId") Long userId,
 	        @PathVariable("routineId") Long routineId, @PathVariable("exerciseId") Long exerciseId,
 	        @RequestBody Exercise exercise) {
-	    return this.routineService.updateExercise(userId, routineId, exerciseId, exercise);
+	    return this.routineService.updateExercise(userId, routineId, exercise);
 	}
 
+	/**
+	 * Elimina un ejercicio de una rutina específica de un usuario.
+	 *
+	 * @param userId      ID del usuario.
+	 * @param routineId   ID de la rutina de la que se eliminará el ejercicio.
+	 * @param exerciseId  ID del ejercicio a eliminar.
+	 * @return            ResponseEntity con un mensaje indicando el resultado de la operación.
+	 */
 	@RequestMapping(path = "/exercise/{userId}/{routineId}/{exerciseId}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> removeExercise(@PathVariable("userId") Long userId,
 	        @PathVariable("routineId") Long routineId, @PathVariable("exerciseId") Long exerciseId) {
 	    return this.routineService.removeExercise(userId, routineId, exerciseId);
 	}
 
+	/**
+	 * Obtiene la lista de ejercicios de una rutina específica de un usuario.
+	 *
+	 * @param userId     ID del usuario.
+	 * @param routineId  ID de la rutina de la que se obtendrán los ejercicios.
+	 * @return           ResponseEntity con la lista de ejercicios o un mensaje indicando el resultado de la operación.
+	 */
 	@RequestMapping(path = "/exercise/{userId}/{routineId}", method = RequestMethod.GET)
 	public ResponseEntity<List<Exercise>> getExercises(@PathVariable("userId") Long userId,
 	        @PathVariable("routineId") Long routineId) {
 	    return this.routineService.getExercises(userId, routineId);
 	}
+
 }

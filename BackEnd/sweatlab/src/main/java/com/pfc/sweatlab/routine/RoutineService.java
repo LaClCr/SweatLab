@@ -54,7 +54,6 @@ public class RoutineService {
             if (existingRoutine != null) {
 
                 existingRoutine.setName(routine.getName()); 
-                existingRoutine.setExercises(routine.getExercises()); 
 
                 this.routineRepository.save(existingRoutine);
 
@@ -81,28 +80,86 @@ public class RoutineService {
             } else {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("La rutina con ID " + routineId + " no existe.");
             }
+        }else {
+        	return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El usuario con ID " + userId + " no existe.");
         }
-
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El usuario con ID " + userId + " no existe.");
     }
     
     public ResponseEntity<String> addExercise(Long userId, Long routineId, Exercise exercise) {
-        // Implementar lógica para agregar un ejercicio a una rutina
-        return ResponseEntity.ok("Ejercicio agregado correctamente a la rutina");
+        User user = this.userService.get(userId);
+        if(user != null) {
+        	Routine routine = this.routineRepository.findById(routineId).orElse(null);
+        	if(routine != null) {
+        		List<Exercise> exerciseList = routine.getExercises();
+        		exerciseList.add(exercise);
+        		this.routineRepository.save(routine);
+        		return ResponseEntity.ok("Ejercicio añadido correctamente a la rutina con ID " + routineId);
+        	}else {
+        		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("La rutina con ID " + routineId + " no existe.");
+        	}
+        }else {
+        	return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El usuario con ID " + userId + " no existe.");
+        }
     }
 
-    public ResponseEntity<String> updateExercise(Long userId, Long routineId, Long exerciseId, Exercise exercise) {
-        // Implementar lógica para actualizar un ejercicio en una rutina
-        return ResponseEntity.ok("Ejercicio actualizado correctamente en la rutina");
+    public ResponseEntity<String> updateExercise(Long userId, Long routineId, Exercise exercise) {
+    	User user = this.userService.get(userId);
+        if(user != null) {
+        	Routine routine = this.routineRepository.findById(routineId).orElse(null);
+        	if(routine != null) {
+        		List<Exercise> exerciseList = routine.getExercises();
+        		for (Exercise elem : exerciseList) {
+					if(elem.getId() == exercise.getId()) {
+						elem.setImage(exercise.getImage());
+						elem.setMuscularGroup(exercise.getMuscularGroup());
+						elem.setName(exercise.getName());
+						elem.setReps(exercise.getReps());
+						elem.setWeight(exercise.getWeight());
+						
+						this.routineRepository.save(routine);
+						return ResponseEntity.ok("Ejercicio con ID " + exercise.getId() + " actualizado correctamente");
+					}
+				}
+        		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El ejercicio con ID " + exercise.getId() + " no existe.");
+        	}else {
+        		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("La rutina con ID " + routineId + " no existe.");
+        	}
+        }else {
+        	return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El usuario con ID " + userId + " no existe.");
+        }
     }
 
     public ResponseEntity<String> removeExercise(Long userId, Long routineId, Long exerciseId) {
-        // Implementar lógica para eliminar un ejercicio de una rutina
-        return ResponseEntity.ok("Ejercicio eliminado correctamente de la rutina");
+    	User user = this.userService.get(userId);
+        if(user != null) {
+        	Routine routine = this.routineRepository.findById(routineId).orElse(null);
+        	if(routine != null) {
+        		List<Exercise> exerciseList = routine.getExercises();
+        		for (Exercise elem : exerciseList) {
+					if(elem.getId() == exerciseId) {
+						exerciseList.remove(elem);
+						this.routineRepository.save(routine);
+						return ResponseEntity.ok("Ejercicio con ID " + exerciseId + " eliminado correctamente");
+					}
+				}
+        		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El ejercicio con ID " + exerciseId + " no existe.");
+        	}else {
+        		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("La rutina con ID " + routineId + " no existe.");
+        	}
+        }else {
+        	return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El usuario con ID " + userId + " no existe.");
+        }
     }
 
     public ResponseEntity<List<Exercise>> getExercises(Long userId, Long routineId) {
-        // Implementar lógica para obtener todos los ejercicios de una rutina
-        return ResponseEntity.ok(List.of(new Exercise())); // Ejemplo de respuesta con un ejercicio ficticio
+        User user = this.userService.get(userId);
+        Routine routine = this.routineRepository.findById(routineId).orElse(null);
+        
+        if (user != null && routine != null) {
+            List<Exercise> exercises = routine.getExercises();
+            return ResponseEntity.ok(exercises);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }
