@@ -25,6 +25,10 @@ Este proyecto de backend se basa en Spring Boot 3.2.4, un marco de trabajo de de
 
 Se utiliza una base de datos H2 embebida en el servidor. Las tablas de la base de datos se generan a partir de los modelos de entidad (Entity) definidos en el proyecto.
 
+<div align="center">
+  <img src="https://github.com/LaClCr/SweatLab/blob/main/DataBase/database.png" width=500 alt="E-R Diagram"/>
+</div>
+
 ## Estructura del Proyecto
 
 La estructura del proyecto se organiza siguiendo las convenciones de un proyecto Spring Boot estándar. Incluye los siguientes paquetes principales:
@@ -48,6 +52,104 @@ La configuración del proyecto se realiza principalmente a través de anotacione
 ### Clases de Configuración
 
 * `ModelMapperConfig` Esta clase de configuración proporciona un bean para la instancia de ModelMapper. ModelMapper es una biblioteca de mapeo de objetos Java que realiza la asignación entre objetos de manera automática, basándose en convenciones y reglas configurables. Simplifica el proceso de mapeo entre objetos DTO (Data Transfer Object) y entidades de dominio. Puedes encontrar el código [aquí](https://github.com/Florida2DAM/pfc-23-24-LaClCr/blob/BackEnd/BackEnd/sweatlab/src/main/java/com/pfc/sweatlab/config/ModelMapperConfig.java).
+
+## Peticiones a la API
+### Para User
+
+- `GET /user`: Devuelve todos los usuarios.
+- `GET /user/{id}`: Devuelve un usuario por su ID.
+- `PUT /user/{id}`: Crea o actualiza un usuario.
+  - Body:
+    ```json
+    {
+      "name": "Nombre",
+      "lastName": "Apellido",
+      "email": "correo@example.com",
+      "password": "contraseña",
+      "dateOfBirth": "yyyy-MM-dd",
+      "weight": 70.5,
+      "height": 170.0
+    }
+    ```
+- `DELETE /user/{id}`: Elimina un usuario por su ID.
+- `POST /user/login`: Realiza el inicio de sesión de un usuario.
+
+### Para Routine
+
+- `GET /routine/{userId}`: Obtiene todas las rutinas de un usuario.
+- `PUT /routine/{userId}`: Crea o actualiza una rutina para un usuario.
+  - Body:
+    ```json
+    {
+      "name": "Nombre de la rutina",
+      "exercises": [
+        {
+          "name": "Nombre del ejercicio",
+          "image": "URL de la imagen",
+          "muscularGroup": "Grupo muscular",
+          "weight": "Peso",
+          "reps": "Repeticiones"
+        }
+      ]
+    }
+    ```
+- `PUT /routine/{userId}/{routineId}`: Actualiza una rutina para un usuario.
+  - Body:
+    ```json
+    {
+      "name": "Nombre de la rutina",
+      "exercises": [
+        {
+          "name": "Nombre del ejercicio",
+          "image": "URL de la imagen",
+          "muscularGroup": "Grupo muscular",
+          "weight": "Peso",
+          "reps": "Repeticiones"
+        }
+      ]
+    }
+    ```
+- `DELETE /routine/{userId}/{routineId}`: Elimina una rutina de un usuario.
+- `PUT /routine/exercise/{userId}/{routineId}`: Agrega un nuevo ejercicio a una rutina específica de un usuario.
+  - Body:
+    ```json
+        {
+          "name": "Nombre del ejercicio",
+          "image": "URL de la imagen",
+          "muscularGroup": "Grupo muscular",
+          "weight": "Peso",
+          "reps": "Repeticiones"
+        }
+    ```
+- `PUT /routine/exercise/{userId}/{routineId}/{exerciseId}`: Actualiza un ejercicio existente en una rutina específica de un usuario.
+- - Body:
+    ```json
+        {
+          "name": "Nombre del ejercicio",
+          "image": "URL de la imagen",
+          "muscularGroup": "Grupo muscular",
+          "weight": "Peso",
+          "reps": "Repeticiones"
+        }
+    ```
+- `DELETE /routine/exercise/{userId}/{routineId}/{exerciseId}`: Elimina un ejercicio de una rutina específica de un usuario.
+- `GET /routine/exercise/{userId}/{routineId}`: Obtiene la lista de ejercicios de una rutina específica de un usuario.
+
+### Para Exercise
+
+- `GET /exercise`: Devuelve todos los ejercicios.
+- `PUT /exercise/{id}`: Crea o actualiza un ejercicio.
+  - Body:
+    ```json
+    {
+      "name": "Nombre del ejercicio",
+      "image": "URL de la imagen",
+      "muscularGroup": "Grupo muscular",
+      "weight": "Peso",
+      "reps": "Repeticiones"
+    }
+    ```
+- `DELETE /exercise/{id}`: Elimina un ejercicio.
 
 
 
