@@ -1,8 +1,23 @@
 <div align="center">
   <h1>SweatLab</h1>
-  <img src="https://github.com/LaClCr/SweatLab/blob/main/Brand/SweatLab_Logo_APP.png" width=300, height=300 alt="VOTAPP Logo"/>
+  <img src="https://github.com/LaClCr/SweatLab/blob/main/Brand/banner.png"/>
 </div>
-  
+<br>
+
+# Índice
+- [Realizado por](#realizado-por)
+- [Sobre este Proyecto](#sobre-este-proyecto)
+- [Backend](#backend)
+    - [Base de Datos](#base-de-datos)
+    - [Estructura del Proyecto](#estructura-del-proyecto)
+    - [Configuración](#configuración)
+        - [Archivos de Configuración](#archivos-de-configuración)
+        - [Clases de Configuración](#clases-de-configuración)
+    - [Peticiones a la API](#peticiones-a-la-api)
+        - [Para User](#para-user)
+        - [Para Routine](#para-routine)
+        - [Para Exercise](#para-exercise)
+- [Frontend](#frontend) (Sin completar)
 # Realizado por:
 
 | [<img src="https://github.com/LaClCr/Portafolio/blob/main/image3.jpeg" width=115><br><sub>Laia Clemente Crespo</sub>](https://github.com/LaClCr) |
