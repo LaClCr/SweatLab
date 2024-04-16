@@ -1,5 +1,4 @@
 <div align="center">
-  <h1>SweatLab</h1>
   <img src="https://github.com/LaClCr/SweatLab/blob/main/Brand/banner.png"/>
 </div>
 <br>
