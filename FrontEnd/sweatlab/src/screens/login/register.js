@@ -68,6 +68,8 @@ export default function Login() {
   const emptyFields = () => {
     setRegisterInfo((prevInfo) => ({
       ...prevInfo,
+      name: '',
+      lastName: '',
       password: '',
       passwordConfirm: '',
       email: '',
@@ -90,9 +92,17 @@ export default function Login() {
       try {
         const response = await registerUser(registerInfo);
         if (response.status === 200) {
-          navigation.navigate('Login');
+          Alert.alert("Operación realizada", response.body, [
+            {
+              text: 'Aceptar',
+              onPress: () => {
+                emptyFields();
+                navigation.navigate('Login');
+              }
+            }
+          ]);
         } else if (response.status === 400) {
-          Alert.alert(response.body, [
+          Alert.alert("Operación cancelada", response.body, [
             {
               text: 'Aceptar',
               onPress: () => {
@@ -102,7 +112,7 @@ export default function Login() {
           ]);
         }
       } catch (error) {
-        console.error('Error de inicio de sesión:', error);
+        Alert.alert('Error de inicio de sesión:', error);
       }
     }
 
@@ -111,12 +121,12 @@ export default function Login() {
   return (
     <View style={styles.container}>
       <AppHeader />
-      <KeyboardAwareScrollView 
-      contentContainerStyle={styles.scrollView} 
-      style={{ flex: 1 }}
-      innerRef={ref => {
-        this.scroll = ref
-      }}
+      <KeyboardAwareScrollView
+        contentContainerStyle={styles.scrollView}
+        style={{ flex: 1 }}
+        innerRef={ref => {
+          this.scroll = ref
+        }}
       >
         <View style={styles.inputLittleContainer}>
           <Button icon={"rename-box"} textColor='white' style={styles.iconButton} labelStyle={{ fontSize: 30, }} />

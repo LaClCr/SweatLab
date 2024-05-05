@@ -45,7 +45,6 @@ export default function Login() {
       try {
         const response = await loginValidation(loginInfo);
         if (response.status === 200) {
-          console.log('Inicio de sesión exitoso');
           navigation.navigate('Main');
         } else if (response.status === 401) {
           setErrorMail(true);
