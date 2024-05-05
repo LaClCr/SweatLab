@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { View, Text, StyleSheet, Alert } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import AppHeader from '../../components/loginHeader';
@@ -10,6 +10,8 @@ export default function Login() {
 
   const { loginInfo, setLoginInfo } = useContext(ScreensContext);
   const navigation = useNavigation();
+  const [errorMail, setErrorMail] = useState(false);
+  const [errorPassword, setErrorPassword] = useState(false);
 
   const handleEmailChange = (text) => {
     setLoginInfo((prevLoginInfo) => ({
@@ -25,30 +27,43 @@ export default function Login() {
     }));
   };
 
+  const emptyFields = () => {
+    setLoginInfo((prevLoginInfo) => ({
+      ...prevLoginInfo,
+      email: '',
+      password: ''
+    }));
+  };
+
   const handleLoginPress = async () => {
     console.log(loginInfo);
-    try {
-      const response = await loginValidation(loginInfo);
-      if (response.status === 200) {
-        console.log('Inicio de sesión exitoso');
-        navigation.navigate('Main');
-        
-      } else if (response.status === 401) {
-        Alert.alert(response.body, 'Por favor, introduzca bien sus credenciales', [
-          {
-            text: 'Aceptar',
-            onPress: () => {
-              setLoginInfo((prevLoginInfo) => ({
-                ...prevLoginInfo,
-                email: '',
-                password: ''
-              }));
+    if (loginInfo.email === '' || loginInfo.password === '') {
+      if (loginInfo.email === '') setErrorMail(true);
+      if (loginInfo.password === '') setErrorPassword(true);
+      Alert.alert('Error', 'No deje campos vacíos');
+    } else {
+      try {
+        const response = await loginValidation(loginInfo);
+        if (response.status === 200) {
+          console.log('Inicio de sesión exitoso');
+          navigation.navigate('Main');
+        } else if (response.status === 401) {
+          setErrorMail(true);
+          setErrorPassword(true);
+          Alert.alert(response.body, 'Por favor, introduzca bien sus credenciales', [
+            {
+              text: 'Aceptar',
+              onPress: () => {
+                emptyFields();
+                setErrorMail(false);
+                setErrorPassword(false);
+              }
             }
-          }
-        ]);
+          ]);
+        }
+      } catch (error) {
+        console.error('Error de inicio de sesión:', error);
       }
-    } catch (error) {
-      console.error('Error de inicio de sesión:', error);
     }
   };
 
@@ -67,6 +82,7 @@ export default function Login() {
             activeOutlineColor="#391059"
             keyboardType="email-address"
             style={{ flex: 1, marginRight: 10 }}
+            error={errorMail}
           />
         </View>
         <View style={styles.inputLittleContainer}>
@@ -80,6 +96,7 @@ export default function Login() {
             activeOutlineColor="#391059"
             secureTextEntry={true}
             style={{ flex: 1, marginRight: 10 }}
+            error={errorPassword}
           />
         </View>
         <View style={styles.buttonContainer}>
@@ -96,7 +113,15 @@ export default function Login() {
         </View>
         <View style={styles.buttonContainer}>
           <Text style={styles.text}>¿No tienes cuenta?</Text>
-          <Button icon="pencil-plus" mode="contained" buttonColor="#ffffff" textColor='#391059' labelStyle={{ ...styles.loginButton, fontSize: 15, }}>Registrarse</Button>
+          <Button 
+          icon="pencil-plus" 
+          mode="contained" 
+          buttonColor="#ffffff" 
+          textColor='#391059' 
+          labelStyle={{ ...styles.loginButton, fontSize: 15, }}
+          onPress={() => navigation.navigate('Register')}
+          >Registrarse
+          </Button>
         </View>
       </View>
 
