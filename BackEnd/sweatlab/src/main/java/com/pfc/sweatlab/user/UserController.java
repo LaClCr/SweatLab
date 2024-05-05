@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -51,6 +52,25 @@ public class UserController {
         return userService.get(id);
     }
 
+    
+    /**
+     * Método para buscar un usuario por su correo electrónico
+     *
+     * @param email Correo electrónico del usuario
+     * @return {@link User} si se encuentra, o un {@link ResponseEntity} con un mensaje de error si no se encuentra
+     */
+    @Operation(summary = "Find By Email", description = "Method that returns a User by Email")
+    @RequestMapping(path = "/email/{email}", method = RequestMethod.GET)
+    public ResponseEntity<?> findByEmail(@PathVariable("email") String email) {
+        User user = userService.findByEmail(email);
+        if (user != null) {
+            return ResponseEntity.ok(user);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario con el correo electrónico " + email + " no encontrado");
+        }
+    }
+
+    
     /**
      * Método para crear o actualizar un usuario.
      *
