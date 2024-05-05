@@ -4,11 +4,12 @@ import { TextInput, Button } from 'react-native-paper';
 import AppHeader from '../../components/loginHeader';
 import ScreensContext from '../general_screens/screensContext';
 import { loginValidation } from '../../functions/loginValidation';
+import getUserByEmail from '../../functions/getUserByEmail';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Login() {
 
-  const { loginInfo, setLoginInfo } = useContext(ScreensContext);
+  const { loginInfo, setLoginInfo, setUserInfo, setLoggedIn } = useContext(ScreensContext);
   const navigation = useNavigation();
   const [errorMail, setErrorMail] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
@@ -45,7 +46,12 @@ export default function Login() {
       try {
         const response = await loginValidation(loginInfo);
         if (response.status === 200) {
-          navigation.navigate('Main');
+          const user = await getUserByEmail(loginInfo.email);
+          if (user !== null) {
+            setUserInfo(user);
+            setLoggedIn(true);
+            navigation.navigate('Main');
+          }
         } else if (response.status === 401) {
           setErrorMail(true);
           setErrorPassword(true);
@@ -112,13 +118,13 @@ export default function Login() {
         </View>
         <View style={styles.buttonContainer}>
           <Text style={styles.text}>¿No tienes cuenta?</Text>
-          <Button 
-          icon="pencil-plus" 
-          mode="contained" 
-          buttonColor="#ffffff" 
-          textColor='#391059' 
-          labelStyle={{ ...styles.loginButton, fontSize: 15, }}
-          onPress={() => navigation.navigate('Register')}
+          <Button
+            icon="pencil-plus"
+            mode="contained"
+            buttonColor="#ffffff"
+            textColor='#391059'
+            labelStyle={{ ...styles.loginButton, fontSize: 15, }}
+            onPress={() => navigation.navigate('Register')}
           >Registrarse
           </Button>
         </View>

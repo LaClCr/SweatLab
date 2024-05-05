@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 import LottieView from "lottie-react-native";
-import {RoutinesGeneralView} from "../routines/routinesGeneralView";
+import {RoutinesGeneralView} from "../routines/routinesGeneralViewScreen";
 
 export default function ConfirmationScreen() {
     const lottieAnimationRef = useRef(null);

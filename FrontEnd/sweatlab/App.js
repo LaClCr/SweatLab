@@ -8,25 +8,23 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { ScreensProvider } from "./src/screens/general_screens/screensContext";
 
 import ConfirmationScreen from "./src/screens/general_screens/confirmationScreen";
-import Login from "./src/screens/login/login";
-import Register from "./src/screens/login/register";
-import Profile from "./src/screens/profile/profile";
-import ProfileUpdate from "./src/screens/profile/profileUpdate";
-import NewRoutine from "./src/screens/routines/newRoutine";
-import RoutineDetails from "./src/screens/routines/routineDetails";
-import RoutinesGeneralView from "./src/screens/routines/routinesGeneralView";
-import RoutineUpdate from "./src/screens/routines/routineUpdate";
+import Login from "./src/screens/login/loginScreen";
+import Register from "./src/screens/login/registerScreen";
+import Profile from "./src/screens/profile/profileScreen";
+import ProfileUpdate from "./src/screens/profile/profileUpdateScreen";
+import NewRoutine from "./src/screens/routines/newRoutineScreen";
+import RoutineDetails from "./src/screens/routines/routineDetailsScreen";
+import RoutinesGeneralView from "./src/screens/routines/routinesGeneralViewScreen";
+import RoutineUpdate from "./src/screens/routines/routineUpdateScreen";
 
 export default function App() {
-  const Tab = createMaterialBottomTabNavigator();
   const Stack = createStackNavigator();
-
   return (
     <SafeAreaProvider>
       <StatusBar backgroundColor="#391059" barStyle="light-content" />
       <NavigationContainer>
         <ScreensProvider>
-          <Stack.Navigator initialRouteName="LoginStack">
+          <Stack.Navigator initialRouteName="Main">
             <Stack.Screen
               name="LoginStack"
               component={LoginStack}
@@ -69,8 +67,6 @@ function LoginStack() {
 
 function MainStack() {
   const Tab = createMaterialBottomTabNavigator();
-  const Stack = createStackNavigator();
-
   return (
     <Tab.Navigator
       initialRouteName="Home"

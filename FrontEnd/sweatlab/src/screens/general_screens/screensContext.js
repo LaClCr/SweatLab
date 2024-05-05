@@ -25,9 +25,9 @@ export const ScreensProvider = ({ children }) => {
     height: null,
     routines: [],
   });
-
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
-    <ScreensContext.Provider value={{ loginInfo, setLoginInfo, registerInfo, setRegisterInfo, userInfo, setUserInfo }}>
+    <ScreensContext.Provider value={{ loginInfo, setLoginInfo, registerInfo, setRegisterInfo, userInfo, setUserInfo, loggedIn, setLoggedIn }}>
       {children}
     </ScreensContext.Provider>
   );
