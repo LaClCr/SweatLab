@@ -32,6 +32,16 @@ public class UserService {
 	public User get(Long id) {
 		return this.userRepository.findById(id).orElse(null);
 	}
+	
+	/**
+	 * Encuentra un usuario por su correo electrónico
+	 *
+	 * @param email Correo electrónico del usuario
+	 * @return Usuario correspondiente al correo electrónico proporcionado, o null si no se encuentra
+	 */
+	public User findByEmail(String email) {
+	    return this.userRepository.findByEmail(email);
+	}
 
 	/**
      * Recupera todos los usuarios
