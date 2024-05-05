@@ -30,7 +30,7 @@ public class User {
 	@Column(name = "password", nullable = false)
 	private String password;
 
-	@Column(name = "date_of_birth", nullable = false)
+	@Column(name = "date_of_birth", nullable = true)
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dateOfBirth;
 
