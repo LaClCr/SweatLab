@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://github.com/LaClCr/SweatLab/blob/main/Brand/banner.png"/>
   <br>
-  <h1>SWEAT LAB</h1>
+  <h1>Sweat Lab</h1>
 </div>
 
 
