@@ -11,11 +11,11 @@ export default function RoutinesGeneralView() {
   const { userInfo, setUserInfo, loggedIn } = useContext(ScreensContext);
   const navigation = useNavigation();
 
-/*   useEffect(() => {
+  useEffect(() => {
     if (!loggedIn) {
       navigation.navigate('LoginStack');
     }
-  }, [userInfo]); */
+  }, [userInfo]);
 
   return (
     <View style={styles.container}>
