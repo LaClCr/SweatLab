@@ -11,11 +11,11 @@ export default function RoutinesGeneralView() {
   const { userInfo, setUserInfo, loggedIn } = useContext(ScreensContext);
   const navigation = useNavigation();
 
-  useEffect(() => {
+/*   useEffect(() => {
     if (!loggedIn) {
       navigation.navigate('LoginStack');
     }
-  }, [userInfo]);
+  }, [userInfo]); */
 
   return (
     <View style={styles.container}>
@@ -31,6 +31,7 @@ export default function RoutinesGeneralView() {
               mode="contained"
               buttonColor="#391059"
               textColor='white'
+              onPress={() => navigation.navigate('NewRoutine')}
               style={styles.addButton}
               labelStyle={styles.addButton}
             >Añadir rutina</Button>
