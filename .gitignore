@@ -1,0 +1,7 @@
+./FrontEnd/sweatlab/node_modules/
+./FrontEnd/sweatlab/.expo/
+./FrontEnd/sweatlab/web-build/
+./FrontEnd/sweatlab/dist/
+
+./BackEnd/.metadata/
+
