@@ -184,3 +184,6 @@ org.eclipse.core.runtime.CoreException: Launch configuration SweatlabApplication
 2024-05-12 13:16:13,075 [Worker-41: Launching SweatlabApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-05-12 13:16:13,085 [Worker-41: Launching SweatlabApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-05-12 13:16:13,091 [Worker-41: Launching SweatlabApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\2DAM\PFC\BackEnd\sweatlab\src\test\resources
+2024-05-12 13:16:17,804 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-12 13:16:17,832 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-12 13:16:17,836 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\2DAM\PFC\BackEnd\sweatlab\src\test\resources
