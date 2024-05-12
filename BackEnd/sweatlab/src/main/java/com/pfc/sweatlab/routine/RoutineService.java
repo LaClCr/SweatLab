@@ -10,6 +10,7 @@ import com.pfc.sweatlab.user.UserService;
 import com.pfc.sweatlab.user.model.User;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,22 +24,20 @@ public class RoutineService {
 
     @Autowired
     private UserService userService;
-
+    
     public List<Routine> findAllByUserId(Long userId) {
         return routineRepository.findAllByUserId(userId);
     }
 
-    public ResponseEntity<String> saveUserRoutine(Long userId, Routine routine) {
-
+    public ResponseEntity<Object> saveUserRoutine(Long userId, Routine routine) {
         User user = this.userService.get(userId);
 
         if (user != null) {
-
             routine.setUser(user);
-            this.routineRepository.save(routine); 
-
-            return ResponseEntity.ok("Rutina añadida correctamente");
-
+            Routine savedRoutine = this.routineRepository.save(routine);
+            Long routineId = savedRoutine.getId();
+            String successMessage = "Rutina añadida correctamente";
+            return ResponseEntity.ok().body(Map.of("message", successMessage, "routineId", routineId));
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El usuario con ID " + userId + " no existe.");
         }
