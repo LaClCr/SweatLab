@@ -47,7 +47,7 @@ public class RoutineController {
 	 * @param routine   Datos de la rutina a guardar o actualizar
 	 */
 	@RequestMapping(path = "/{userId}", method = RequestMethod.PUT)
-	public ResponseEntity<String> saveUserRoutine(@PathVariable("userId") Long userId,
+	public ResponseEntity<Object> saveUserRoutine(@PathVariable("userId") Long userId,
 			@RequestBody Routine routine) {
 		return this.routineService.saveUserRoutine(userId, routine);
 	}
