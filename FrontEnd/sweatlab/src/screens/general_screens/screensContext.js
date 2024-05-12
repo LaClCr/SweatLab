@@ -26,8 +26,13 @@ export const ScreensProvider = ({ children }) => {
     routines: [],
   });
   const [loggedIn, setLoggedIn] = useState(false);
+  const [selectedRoutine, setSelectedRoutine] = useState({
+    id: null,
+    name: '',
+    exercises: [],
+  });
   return (
-    <ScreensContext.Provider value={{ loginInfo, setLoginInfo, registerInfo, setRegisterInfo, userInfo, setUserInfo, loggedIn, setLoggedIn }}>
+    <ScreensContext.Provider value={{ loginInfo, setLoginInfo, registerInfo, setRegisterInfo, userInfo, setUserInfo, loggedIn, setLoggedIn, selectedRoutine, setSelectedRoutine }}>
       {children}
     </ScreensContext.Provider>
   );

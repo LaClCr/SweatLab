@@ -50,7 +50,7 @@ export default function Login() {
           if (user !== null) {
             setUserInfo(user);
             setLoggedIn(true);
-            navigation.navigate('Main');
+            navigation.navigate('RoutinesGeneralView');
           }
         } else if (response.status === 401) {
           setErrorMail(true);
