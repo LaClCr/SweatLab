@@ -9,10 +9,16 @@ import { registerUser } from '../../functions/registerUser';
 
 export default function Login() {
 
-  const { registerInfo, setRegisterInfo } = useContext(ScreensContext);
-
   const [errorMail, setErrorMail] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
+  const [registerInfo, setRegisterInfo] = useState({
+    name: '',
+    lastName: '',
+    email: '',
+    emailConfirm: '',
+    password: '',
+    passwordConfirm: '',
+  });
 
   const navigation = useNavigation();
 

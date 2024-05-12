@@ -9,18 +9,17 @@ import routine_icon from '../../assets/icons/routine_icon.png';
 
 
 export default function RoutinesGeneralView() {
-  const { userInfo, loggedIn, setSelectedRoutine } = useContext(ScreensContext);
+  const { userInfo, loggedIn } = useContext(ScreensContext);
   const navigation = useNavigation();
 
   useEffect(() => {
     if (!loggedIn) {
       navigation.navigate('LoginStack');
     }
-  }, [userInfo]);
+  }, [loggedIn]);
 
   const handlePressRoutine = (routine) => {
-    setSelectedRoutine(routine);
-    navigation.navigate('RoutineDetails');
+    navigation.navigate('RoutineDetails', { routine: routine });
   }
 
   return (
@@ -50,7 +49,7 @@ export default function RoutinesGeneralView() {
                   <View style={styles.routineNameContainer}>
                   <Text style={styles.routineName}>{routine.name}</Text>
                   </View>
-                  <Text style={styles.routineDescription}>{routine.exercises.length} ejercicios</Text>
+                  <Text style={styles.routineDescription}>{routine.exercises.length} ejercicio(s)</Text>
                 </View>
               </TouchableOpacity>
             ))}

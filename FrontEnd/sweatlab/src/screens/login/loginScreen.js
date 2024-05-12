@@ -9,10 +9,14 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function Login() {
 
-  const { loginInfo, setLoginInfo, setUserInfo, setLoggedIn } = useContext(ScreensContext);
+  const { setUserInfo, setLoggedIn, email, setEmail } = useContext(ScreensContext);
   const navigation = useNavigation();
   const [errorMail, setErrorMail] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
+  const [loginInfo, setLoginInfo] = useState({
+    email: '',
+    password: ''
+  });
 
   const handleEmailChange = (text) => {
     setLoginInfo((prevLoginInfo) => ({
@@ -50,6 +54,7 @@ export default function Login() {
           if (user !== null) {
             setUserInfo(user);
             setLoggedIn(true);
+            setEmail(loginInfo.email);
             navigation.navigate('RoutinesGeneralView');
           }
         } else if (response.status === 401) {

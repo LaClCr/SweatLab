@@ -37,7 +37,9 @@ async function addExercises(userId, routineId, exercises) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(exercises[i])
+                body: JSON.stringify({name: exercises[i].name,
+                image: exercises[i].image,
+                muscularGroup: exercises[i].muscularGroup,})
             });
 
             const data = await response.text();

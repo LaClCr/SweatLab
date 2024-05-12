@@ -11,7 +11,7 @@ import getUserByEmail from '../../functions/getUserByEmail';
 
 export default function NewRoutine() {
 
-  const { userInfo, setUserInfo } = useContext(ScreensContext);
+  const { userInfo, setUserInfo, email } = useContext(ScreensContext);
   const [selectedExercises, setSelectedExercises] = useState([]);
   const [exercisesFromDB, setExercisesFromDB] = useState([]);
   const [name, setName] = useState('');
@@ -66,7 +66,7 @@ export default function NewRoutine() {
     try {
       const response = await addRoutine(userInfo.id, routine);
       if (response.status === 200) {
-        const user = await getUserByEmail(userInfo.email);
+        const user = await getUserByEmail(email);
         if (user !== null) {
           setUserInfo(user);
           navigation.navigate('RoutinesGeneralView');

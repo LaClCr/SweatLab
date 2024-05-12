@@ -16,6 +16,7 @@ import NewRoutine from "./src/screens/routines/newRoutineScreen";
 import RoutineDetails from "./src/screens/routines/routineDetailsScreen";
 import RoutinesGeneralView from "./src/screens/routines/routinesGeneralViewScreen";
 import RoutineUpdate from "./src/screens/routines/routineUpdateScreen";
+import ExerciseUpdate from "./src/screens/routines/exerciseUpdateScreen";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -129,6 +130,11 @@ function HomeStack() {
       <Stack.Screen
         name="RoutineUpdate"
         component={RoutineUpdate}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ExerciseUpdate"
+        component={ExerciseUpdate}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
