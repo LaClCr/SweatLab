@@ -1,6 +1,6 @@
 async function getAllExercises() {
     try {
-        const response = await fetch(`http://192.168.18.40:8080/exercise`);
+        const response = await fetch(`http://192.168.1.53:8080/exercise`);
         if (!response.ok) {
             throw new Error('Error al obtener los ejercicios');
         }

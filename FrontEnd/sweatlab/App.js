@@ -6,12 +6,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { ScreensProvider } from "./src/screens/general_screens/screensContext";
-
-import ConfirmationScreen from "./src/screens/general_screens/confirmationScreen";
 import Login from "./src/screens/login/loginScreen";
 import Register from "./src/screens/login/registerScreen";
 import ProfileScreen from "./src/screens/profile/profileScreen";
-import ProfileUpdate from "./src/screens/profile/profileUpdateScreen";
 import NewRoutine from "./src/screens/routines/newRoutineScreen";
 import RoutineDetails from "./src/screens/routines/routineDetailsScreen";
 import RoutinesGeneralView from "./src/screens/routines/routinesGeneralViewScreen";
@@ -34,11 +31,6 @@ export default function App() {
             <Stack.Screen
               name="Main"
               component={MainStack}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="ConfirmationScreen"
-              component={ConfirmationScreen}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>
@@ -149,11 +141,6 @@ function ProfileStack() {
       <Stack.Screen
         name="ProfileScreen"
         component={ProfileScreen}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="ProfileUpdate"
-        component={ProfileUpdate}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
