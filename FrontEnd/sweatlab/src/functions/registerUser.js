@@ -1,5 +1,5 @@
 export async function registerUser(registerInfo) {
-    const url = 'http://192.168.18.40:8080/user';
+    const url = 'http://107.21.99.46:8080/user';
     try {
         const response = await fetch(url, {
             method: 'PUT',

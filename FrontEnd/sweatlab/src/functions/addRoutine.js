@@ -1,5 +1,5 @@
 export async function addRoutine(userId, routine) {
-    const url = 'http://192.168.18.40:8080/routine/' + userId;
+    const url = 'http://107.21.99.46:8080/routine/' + userId;
 
     try {
         const response = await fetch(url, {
@@ -28,7 +28,7 @@ export async function addRoutine(userId, routine) {
 }
 
 async function addExercises(userId, routineId, exercises) {
-    const url = 'http://192.168.18.40:8080/routine/exercise/' + userId + '/' + routineId;
+    const url = 'http://107.21.99.46:8080/routine/exercise/' + userId + '/' + routineId;
 
     for (let i = 0; i < exercises.length; i++) {
         try {

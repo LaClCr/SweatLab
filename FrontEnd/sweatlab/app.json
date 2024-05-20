@@ -4,12 +4,13 @@
     "slug": "sweatlab",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./src/assets/logos/SweatLab_Logo_APP.png",
     "userInterfaceStyle": "light",
     "assetBundlePatterns": ["**/*"],
     "splash": {
       "image": "./src/assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#391059"
     },
     "ios": {
       "supportsTablet": true

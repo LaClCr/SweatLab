@@ -1,5 +1,5 @@
 export async function deleteRoutine(userId, routineId) {
-    const url = 'http://192.168.18.40:8080/routine/'+ userId +'/'+ routineId;
+    const url = 'http://107.21.99.46:8080/routine/'+ userId +'/'+ routineId;
 
     try {
         const response = await fetch(url, {
