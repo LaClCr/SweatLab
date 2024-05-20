@@ -1,6 +1,6 @@
 async function getUserByEmail(email) {
     try {
-        const response = await fetch(`http://192.168.1.53:8080/user/email/${email}`);
+        const response = await fetch(`http://192.168.18.40:8080/user/email/${email}`);
         if (!response.ok) {
             throw new Error('Error al obtener el usuario por correo electrónico');
         }

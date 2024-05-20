@@ -1,5 +1,5 @@
 export async function loginValidation(loginData) {
-    const url = 'http://192.168.1.53:8080/user/login';
+    const url = 'http://192.168.18.40:8080/user/login';
 
     try {
         const response = await fetch(url, {
