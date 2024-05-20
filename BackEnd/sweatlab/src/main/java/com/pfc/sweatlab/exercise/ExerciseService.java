@@ -10,42 +10,63 @@ import com.pfc.sweatlab.exercise.model.Exercise;
 @Service
 public class ExerciseService {
 
-	@Autowired
-	ExerciseRepository exerciseRepository;
+    @Autowired
+    ExerciseRepository exerciseRepository;
 
-	public Exercise get(Long id) {
-
+    /**
+     * Recupera un ejercicio por su ID.
+     *
+     * @param id ID del ejercicio a recuperar
+     * @return El ejercicio correspondiente al ID proporcionado, o null si no se encuentra
+     */
+    public Exercise get(Long id) {
         return this.exerciseRepository.findById(id).orElse(null);
     }
-	
-	public List<Exercise> findAll() {
 
-		return (List<Exercise>) this.exerciseRepository.findAll();
-	}
+    /**
+     * Recupera todos los ejercicios.
+     *
+     * @return Una lista de todos los ejercicios
+     */
+    public List<Exercise> findAll() {
+        return (List<Exercise>) this.exerciseRepository.findAll();
+    }
 
-	public void save(Long id, Exercise ex) {
+    /**
+     * Guarda un nuevo ejercicio o actualiza uno existente.
+     *
+     * @param id ID del ejercicio a actualizar. Si es null, se crea un nuevo ejercicio.
+     * @param ex Datos del ejercicio a guardar o actualizar
+     */
+    public void save(Long id, Exercise ex) {
 
-		Exercise exercise;
+        Exercise exercise;
 
-		if (id == null) {
-			exercise = new Exercise();
-		} else {
-			exercise = this.get(id);
-		}
+        if (id == null) {
+            exercise = new Exercise();
+        } else {
+            exercise = this.get(id);
+        }
 
-		exercise.setName(ex.getName());
-		exercise.setImage(ex.getImage());
-		exercise.setMuscularGroup(ex.getMuscularGroup());
+        exercise.setName(ex.getName());
+        exercise.setImage(ex.getImage());
+        exercise.setMuscularGroup(ex.getMuscularGroup());
 
-		this.exerciseRepository.save(exercise);
-	}
+        this.exerciseRepository.save(exercise);
+    }
 
-	public void delete(Long id) throws Exception {
+    /**
+     * Elimina un ejercicio por su ID.
+     *
+     * @param id ID del ejercicio a eliminar
+     * @throws Exception si el ejercicio no existe
+     */
+    public void delete(Long id) throws Exception {
 
-		if (this.get(id) == null) {
-			throw new Exception("Not exists");
-		}
+        if (this.get(id) == null) {
+            throw new Exception("Not exists");
+        }
 
-		this.exerciseRepository.deleteById(id);
-	}
+        this.exerciseRepository.deleteById(id);
+    }
 }

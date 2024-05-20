@@ -25,10 +25,24 @@ public class RoutineService {
     @Autowired
     private UserService userService;
     
+    
+    /**
+     * Encuentra todas las rutinas de ejercicios asociadas a un usuario por su ID.
+     *
+     * @param userId ID del usuario
+     * @return Lista de rutinas de ejercicios asociadas al usuario
+     */
     public List<Routine> findAllByUserId(Long userId) {
         return routineRepository.findAllByUserId(userId);
     }
 
+    /**
+     * Guarda una rutina de ejercicios para un usuario.
+     *
+     * @param userId  ID del usuario
+     * @param routine Rutina de ejercicios a guardar
+     * @return ResponseEntity con el resultado de la operación
+     */
     public ResponseEntity<Object> saveUserRoutine(Long userId, Routine routine) {
         User user = this.userService.get(userId);
 
@@ -43,6 +57,15 @@ public class RoutineService {
         }
     }
 
+    
+    /**
+     * Actualiza una rutina de ejercicios para un usuario.
+     *
+     * @param userId    ID del usuario
+     * @param routine   Nueva información de la rutina de ejercicios
+     * @param routineId ID de la rutina de ejercicios a actualizar
+     * @return ResponseEntity con el resultado de la operación
+     */
     public ResponseEntity<String> updateUserRoutine(Long userId, Routine routine, Long routineId) {
 
         User user = this.userService.get(userId);
@@ -67,6 +90,13 @@ public class RoutineService {
         }
     }
 
+    /**
+     * Elimina una rutina de ejercicios para un usuario.
+     *
+     * @param userId    ID del usuario
+     * @param routineId ID de la rutina de ejercicios a eliminar
+     * @return ResponseEntity con el resultado de la operación
+     */
     public ResponseEntity<String> removeUserRoutine(Long userId, Long routineId) {
 
         User user = this.userService.get(userId);
@@ -84,6 +114,14 @@ public class RoutineService {
         }
     }
     
+    /**
+     * Agrega un ejercicio a una rutina de ejercicios existente.
+     *
+     * @param userId    ID del usuario
+     * @param routineId ID de la rutina de ejercicios
+     * @param exercise  Ejercicio a agregar
+     * @return ResponseEntity con el resultado de la operación
+     */
     public ResponseEntity<String> addExercise(Long userId, Long routineId, Exercise exercise) {
         User user = this.userService.get(userId);
         if(user != null) {
@@ -101,6 +139,14 @@ public class RoutineService {
         }
     }
 
+    /**
+     * Actualiza un ejercicio en una rutina de ejercicios existente.
+     *
+     * @param userId    ID del usuario
+     * @param routineId ID de la rutina de ejercicios
+     * @param exercise  Ejercicio a actualizar
+     * @return ResponseEntity con el resultado de la operación
+     */
     public ResponseEntity<String> updateExercise(Long userId, Long routineId, Exercise exercise) {
     	User user = this.userService.get(userId);
         if(user != null) {
@@ -128,6 +174,14 @@ public class RoutineService {
         }
     }
 
+    /**
+     * Elimina un ejercicio de una rutina de ejercicios existente.
+     *
+     * @param userId     ID del usuario
+     * @param routineId  ID de la rutina de ejercicios
+     * @param exerciseId ID del ejercicio a eliminar
+     * @return ResponseEntity con el resultado de la operación
+     */
     public ResponseEntity<String> removeExercise(Long userId, Long routineId, Long exerciseId) {
     	User user = this.userService.get(userId);
         if(user != null) {
@@ -150,6 +204,13 @@ public class RoutineService {
         }
     }
 
+    /**
+     * Obtiene todos los ejercicios de una rutina de ejercicios.
+     *
+     * @param userId    ID del usuario
+     * @param routineId ID de la rutina de ejercicios
+     * @return ResponseEntity con la lista de ejercicios de la rutina
+     */
     public ResponseEntity<List<Exercise>> getExercises(Long userId, Long routineId) {
         User user = this.userService.get(userId);
         Routine routine = this.routineRepository.findById(routineId).orElse(null);
