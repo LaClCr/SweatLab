@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.pfc.sweatlab.config"},{"l":"com.pfc.sweatlab.exercise"},{"l":"com.pfc.sweatlab.exercise.model"},{"l":"com.pfc.sweatlab.routine"},{"l":"com.pfc.sweatlab.routine.model"},{"l":"com.pfc.sweatlab.user"},{"l":"com.pfc.sweatlab.user.model"}];updateSearchResults();

@@ -97,6 +97,13 @@ public class UserController {
     }
     
     
+    
+    /**
+     * Método para realizar el inicio de sesión de un usuario.
+     * 
+     * @param loginDto Datos de inicio de sesión del usuario.
+     * @return ResponseEntity que indica el resultado del inicio de sesión.
+     */
     @Operation(summary = "Login", description = "Method that performs user login")
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     public ResponseEntity<String> login(@RequestBody LoginDto loginDto) {

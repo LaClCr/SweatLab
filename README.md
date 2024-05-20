@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://github.com/LaClCr/SweatLab/blob/main/Brand/banner.png"/>
   <br>
-  <h1>Sweat Lab</h1>
+  <h1>PFC: Sweat Lab</h1>
 </div>
 
 
@@ -14,20 +14,16 @@
     - [Configuración](#configuración)
         - [Archivos de Configuración](#archivos-de-configuración)
         - [Clases de Configuración](#clases-de-configuración)
-    - [Peticiones a la API](#peticiones-a-la-api)
-        - [Para User](#para-user)
-        - [Para Routine](#para-routine)
-        - [Para Exercise](#para-exercise)
-- [Frontend](#frontend) (Sin completar)
+- [Frontend](#frontend)
+    - [Tecnologías Utilizadas](#tecnologías-utilizadas)
+    - [Estructura del Proyecto](#estructura-del-proyecto-frontend)
+- [Instalación](#instalación)
 # Realizado por:
 
 | [<img src="https://github.com/LaClCr/Portafolio/blob/main/image3.jpeg" width=115><br><sub>Laia Clemente Crespo</sub>](https://github.com/LaClCr) |
 | :---: |
 
 # Sobre este Proyecto:
-<h4 align="center">
-:construction: Proyecto en construcción :construction:
-</h4>
 Presentada como mi trabajo de final de ciclo (TFC), SweatLab es una aplicación móvil diseñada para ayudarte a planificar, registrar y seguir tus rutinas de entrenamiento personalizadas. Con una interfaz intuitiva y características innovadoras, SweatLab te permite crear y gestionar tus rutinas de entrenamiento, registrar tu progreso y mantener un seguimiento de tus logros fitness.
 
 # Backend
@@ -69,108 +65,53 @@ La configuración del proyecto se realiza principalmente a través de anotacione
 
 * `ModelMapperConfig` Esta clase de configuración proporciona un bean para la instancia de ModelMapper. ModelMapper es una biblioteca de mapeo de objetos Java que realiza la asignación entre objetos de manera automática, basándose en convenciones y reglas configurables. Simplifica el proceso de mapeo entre objetos DTO (Data Transfer Object) y entidades de dominio. Puedes encontrar el código [aquí](https://github.com/Florida2DAM/pfc-23-24-LaClCr/blob/BackEnd/BackEnd/sweatlab/src/main/java/com/pfc/sweatlab/config/ModelMapperConfig.java).
 
-## Peticiones a la API
-### Para User
-
-- `GET /user`: Devuelve todos los usuarios.
-- `GET /user/{id}`: Devuelve un usuario por su ID.
-- `PUT /user/{id}`: Crea o actualiza un usuario.
-  - Body:
-    ```json
-    {
-      "name": "Nombre",
-      "lastName": "Apellido",
-      "email": "correo@example.com",
-      "password": "contraseña",
-      "dateOfBirth": "yyyy-MM-dd",
-      "weight": 70.5,
-      "height": 170.0
-    }
-    ```
-- `DELETE /user/{id}`: Elimina un usuario por su ID.
-- `POST /user/login`: Realiza el inicio de sesión de un usuario.
-
-### Para Routine
-
-- `GET /routine/{userId}`: Obtiene todas las rutinas de un usuario.
-- `PUT /routine/{userId}`: Crea o actualiza una rutina para un usuario.
-  - Body:
-    ```json
-    {
-      "name": "Nombre de la rutina",
-      "exercises": [
-        {
-          "name": "Nombre del ejercicio",
-          "image": "URL de la imagen",
-          "muscularGroup": "Grupo muscular",
-          "weight": "Peso",
-          "reps": "Repeticiones"
-        }
-      ]
-    }
-    ```
-- `PUT /routine/{userId}/{routineId}`: Actualiza una rutina para un usuario.
-  - Body:
-    ```json
-    {
-      "name": "Nombre de la rutina",
-      "exercises": [
-        {
-          "name": "Nombre del ejercicio",
-          "image": "URL de la imagen",
-          "muscularGroup": "Grupo muscular",
-          "weight": "Peso",
-          "reps": "Repeticiones"
-        }
-      ]
-    }
-    ```
-- `DELETE /routine/{userId}/{routineId}`: Elimina una rutina de un usuario.
-- `PUT /routine/exercise/{userId}/{routineId}`: Agrega un nuevo ejercicio a una rutina específica de un usuario.
-  - Body:
-    ```json
-        {
-          "name": "Nombre del ejercicio",
-          "image": "URL de la imagen",
-          "muscularGroup": "Grupo muscular",
-          "weight": "Peso",
-          "reps": "Repeticiones"
-        }
-    ```
-- `PUT /routine/exercise/{userId}/{routineId}/{exerciseId}`: Actualiza un ejercicio existente en una rutina específica de un usuario.
-- - Body:
-    ```json
-        {
-          "name": "Nombre del ejercicio",
-          "image": "URL de la imagen",
-          "muscularGroup": "Grupo muscular",
-          "weight": "Peso",
-          "reps": "Repeticiones"
-        }
-    ```
-- `DELETE /routine/exercise/{userId}/{routineId}/{exerciseId}`: Elimina un ejercicio de una rutina específica de un usuario.
-- `GET /routine/exercise/{userId}/{routineId}`: Obtiene la lista de ejercicios de una rutina específica de un usuario.
-
-### Para Exercise
-
-- `GET /exercise`: Devuelve todos los ejercicios.
-- `PUT /exercise/{id}`: Crea o actualiza un ejercicio.
-  - Body:
-    ```json
-    {
-      "name": "Nombre del ejercicio",
-      "image": "URL de la imagen",
-      "muscularGroup": "Grupo muscular",
-      "weight": "Peso",
-      "reps": "Repeticiones"
-    }
-    ```
-- `DELETE /exercise/{id}`: Elimina un ejercicio.
-
-
-
 # Frontend
-(Sin completar)
+
+El frontend de SweatLab está desarrollado utilizando React Native, una biblioteca popular para construir aplicaciones móviles multiplataforma con JavaScript y React. La aplicación está diseñada para ser intuitiva y fácil de usar, proporcionando una experiencia de usuario fluida.
+
+## Tecnologías Utilizadas
+
+[![React Native](https://img.shields.io/badge/React_Native-0.70-blue.svg)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-48.0.8-lightgrey.svg)](https://expo.dev/)
+
+## Estructura del Proyecto (Frontend)
+
+La estructura del proyecto frontend está organizada de la siguiente manera:
+
+* `components/` -> Contiene los componentes reutilizables de la UI.
+* `screens/` -> Contiene las pantallas principales de la aplicación.
+* `functions/` -> Funciones que comunican con la API del BackEnd.
+* `assets/` -> Recursos estáticos como imágenes y fuentes.
+* `App.js` -> Punto de entrada principal de la aplicación.
 
 
+# Instalación
+
+Para instalar y ejecutar el proyecto localmente, sigue los siguientes pasos:
+
+1. **Clonar el repositorio:**
+    ```sh
+    git clone https://github.com/LaClCr/SweatLab.git
+    cd SweatLab
+    ```
+
+2. **Backend:**
+    - **Instalar las dependencias de Maven:**
+        ```sh
+        ./mvnw clean install
+        ```
+    - **Ejecutar la aplicación:**
+        ```sh
+        ./mvnw spring-boot:run
+        ```
+
+3. **Frontend:**
+    - **Instalar las dependencias de npm:**
+        ```sh
+        npm install
+        ```
+    - **Iniciar la aplicación:**
+        ```sh
+        npm start
+        ```
 
