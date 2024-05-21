@@ -1,14 +1,15 @@
 {
   "expo": {
-    "name": "sweatlab",
-    "slug": "sweatlab",
+    "name": "SweatLab",
+    "slug": "SweatLab",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/logos/SweatLab_Logo_APP.png",
     "userInterfaceStyle": "light",
     "assetBundlePatterns": ["**/*"],
+    "platforms": ["ios", "android", "web"],
     "splash": {
-      "image": "./src/assets/images/splash.png",
+      "image": "./src/assets/logos/SweatLab_Logo_APP.png",
       "resizeMode": "contain",
       "backgroundColor": "#391059"
     },
@@ -16,9 +17,19 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.laiaclcr.sweatlab"
+      "package": "com.laiaclcr.sweatlab",
+      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
     },
-    "plugins": ["expo-build-properties"],
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
     "extra": {
       "eas": {
         "projectId": "2d5879fd-3658-4e4e-a204-b4e2ce491368"
