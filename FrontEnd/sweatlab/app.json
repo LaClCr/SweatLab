@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SweatLab",
-    "slug": "SweatLab",
+    "name": "sweatlab",
+    "slug": "sweatlab",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/logos/SweatLab_Logo_APP.png",
