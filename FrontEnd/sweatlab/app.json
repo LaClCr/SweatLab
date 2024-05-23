@@ -14,11 +14,16 @@
       "backgroundColor": "#391059"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.laiaclcr.sweatlab"
     },
     "android": {
       "package": "com.laiaclcr.sweatlab",
-      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/logos/SweatLab_Logo_APP.png",
+        "backgroundColor": "#391059"
+      }
     },
     "plugins": [
       [
