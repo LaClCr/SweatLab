@@ -8,6 +8,7 @@
 
 - [Realizado por](#realizado-por)
 - [Sobre este Proyecto](#sobre-este-proyecto)
+- [Memoria](#memoria)
 - [Backend](#backend)
     - [Base de Datos](#base-de-datos)
     - [Estructura del Proyecto](#estructura-del-proyecto)
@@ -29,6 +30,10 @@
 # Sobre este Proyecto:
 <br>
 Presentada como mi trabajo de final de ciclo (TFC), SweatLab es una aplicación móvil diseñada para ayudarte a planificar, registrar y seguir tus rutinas de entrenamiento personalizadas. Con una interfaz intuitiva y características innovadoras, SweatLab te permite crear y gestionar tus rutinas de entrenamiento, registrar tu progreso y mantener un seguimiento de tus logros fitness.
+
+# Memoria 
+
+Puedes encontrar el informe/memoria de este proyecto [aquí](https://github.com/Florida2DAM/pfc-23-24-LaClCr/blob/main/ProjectReport_(Memoria)/SweatLab_Memoria_ENTREGA.pdf).
 
 # Backend
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2.4-green.svg)](https://spring.io/projects/spring-boot)
@@ -129,3 +134,7 @@ Para instalar y ejecutar el proyecto localmente, sigue los siguientes pasos:
         npm start
         ```
 # QR de descarga
+
+<div align="center">
+  <img src="https://github.com/Florida2DAM/pfc-23-24-LaClCr/blob/main/APK/QR_Descarga.png" width=300/>
+</div>
